@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GOOGLE MAPS API</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<div id="googleMap" style="width:500px; height:380px;"></div>
+
+
+
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function initialize(){
+		var mapProp = {
+			center: new google.maps.LatLng(37.8043637, -122.2711137),
+			zoom: 5,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById('googleMap'), mapProp)
+	}
+	google.maps.event.addDomListener(window, 'load', initialize)
+	</script>
+</body>
+</html>
